@@ -1,3 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+:root{
+  --gradient-animation: linear-gradient(-45deg, #aaffa9, #11ffbd, #87f786, #07f9b6);
+}
+
+@utility bg-gradient-animation {
+  background: var(--gradient-animation);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
