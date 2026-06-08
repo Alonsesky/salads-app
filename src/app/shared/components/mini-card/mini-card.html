@@ -1,0 +1,23 @@
+<div class="flex flex-row items-center p-5 max-w-100"
+    (mouseenter)="hovered = true"
+    (mouseleave)="hovered = false">
+
+  <div
+    class="flex mt-2 w-20 h-20 mask-contain mask-no-repeat"
+    [style.backgroundColor]="hovered ? hoverColor() : iconColor()"
+    [style.mask-image]="'url(' + iconPath() + ')'"
+    >
+  </div>
+
+  <div class="mb-4 ml-3 pt-2">
+    <h2 class="text-[20px] font-bold"
+        [style.color]="hovered ? hoverColor() : 'black'">
+      {{ title() }}
+    </h2>
+
+    <p>
+      {{ description() }}
+    </p>
+  </div>
+
+</div>

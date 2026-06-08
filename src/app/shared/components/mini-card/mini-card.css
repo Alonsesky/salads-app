@@ -1,0 +1,7 @@
+.icon {
+  background-color: orange;
+}
+
+.icon:hover {
+  background-color: green;
+}
